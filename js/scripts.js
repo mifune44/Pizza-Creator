@@ -8,8 +8,8 @@ function Pizza(size, crust, vegetables, meats, cheeses) {
 }
 
 Pizza.prototype.calculatePrice = function() {
-  this.price = 10; //base price
-  //size price
+  this.price = 10; 
+  
   if (this.size === 'Miniscule') {
     this.price -= 3;
   } else if (this.size === 'Monstrous') {
@@ -17,7 +17,7 @@ Pizza.prototype.calculatePrice = function() {
   } else if (this.size === 'Mega-Mammoth-Colassally-Gargantuan') {
     this.price += 6;
   }
-  //crust price
+  
   if (this.crust === 'deep-dish') {
     this.price += 3;
   } else if (this.crust === 'hand-tossed') {
@@ -26,15 +26,15 @@ Pizza.prototype.calculatePrice = function() {
     this.price += 2;
   }
   
-    //vegetables price
+    
   for (var i = 0; i < this.vegetables.length; i++) {
     this.price += 1.5;
   }
-  //meat price
+  
   for (var i = 0; i < this.meats.length; i++) {
     this.price += 2.5;
   }
-  //cheese 
+  
   for (var i = 0; i < this.cheeses.length; i++) {
     this.price += 1;
   }
@@ -56,7 +56,7 @@ var displayPizzaDetails = function() {
 $(document).ready(function() {
   $('#order-form').submit(function(event) {
     event.preventDefault();
-    //store form inputs in variable to create new pizza
+    
     var size = $('input[name=size]:checked').val();
     var crust = $('input[name=crust]:checked').val();
     var vegetables = $('input:checkbox[name=vegetables]:checked').map(function() {
@@ -69,11 +69,11 @@ $(document).ready(function() {
         return this.value;
       }).get();
     var newPizza = new Pizza(size, crust, vegetables, meats, cheeses);
-    //calculate price based on user input
+    
     newPizza.calculatePrice();
-    //display each pizza as a list item
+    
     $('#pizza-list').append('<li><span class="pizza">' + newPizza.shortDescription() + '</span></li>');
-    //reset form buttons back to default
+    
     document.getElementById("order-form").reset();
 
     $(".pizza").last().click(function() {
