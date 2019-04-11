@@ -30,4 +30,3 @@ _Joshua Landry mifune44@gmail.com_
 *This software is licensed under the MIT license.*
 
 Copyright (c) 2019 **_Joshua Landry_**
-

@@ -1,1 +1,123 @@
-$
+body {
+  background-image:url(https://c1.staticflickr.com/1/115/284184535_1d0a1ba536_b.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.well{
+  border-radius: 25px;
+  background: black;
+ }
+ 
+
+
+@font-face {
+font-family: "Eater of Children";
+src: url("fonts/Eater of Children.ttf");
+}
+.row{
+ /* opacity: 0.5;
+  filter: alpha(opacity=50)*/
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.5)
+  }
+ h1{ 
+	text-align: center;
+	font-size: 120px;
+	font-family: Eater of Children;
+	animation-name: flash;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+
+}
+@keyframes flash {
+    from {color: red;}
+    to {color: black;}
+}
+@font-face {
+	font-family: "MB-Real Grinder";
+	 src: url("fonts/MB-RealGrinder.ttf");
+}
+h2{ 
+	text-align: center;
+	font-size: 100px;
+	font-family: MB-Real Grinder;
+	animation-name: flash;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+
+}
+@keyframes flash {
+    from {color: red;}
+    to {color: black;}
+}
+.buttonHolder{ text-align: center; 
+}
+#button-submit{
+	text-align: center;
+	background-color:red;
+	 border-radius: 25px;
+	 width: 10pc;
+	 height: 40px;
+	 font-family: cooper std;
+	 font-size: 20px;
+}
+#topside{
+	color:white;
+	font-family: cooper std;
+}
+#belowsides{
+	color: white;
+	font-family: cooper std;
+}
+.checkbox{
+	text-align: center;
+	color:white;
+}
+h4{
+	font-family: cooper std;
+	font-size: 50px;
+	text-align: center
+
+}
+h3{
+	font-family: cooper std;
+	font-size: 50px;
+	/*text-align: center*/
+}
+.form-group {
+  padding-bottom: 10px;
+}
+
+#pizza-details {
+  display: none;
+  color: red;
+  font-size: 30px;
+  font-family: cooper std;
+}
+
+.pizza {
+  cursor: pointer;
+  color: white;
+  font-family: cooper std;
+  font-size: 30px;
+  text-align:center;
+}
+
+.pizza:hover {
+  text-decoration: underline;
+  color: red;
+}
+.order-form{
+	color: white;
+}
+
+p{
+	text-align: center
+}
